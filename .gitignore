@@ -1,0 +1,4 @@
+build/
+*.swp
+*.swo
+python/pycopa.egg-info/

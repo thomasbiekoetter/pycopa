@@ -1,4 +1,7 @@
 build/
 *.swp
 *.swo
-python/pycopa.egg-info/
+__pycache__/
+pycopa.egg-info/
+python/pycopa/include/
+python/pycopa/lib/

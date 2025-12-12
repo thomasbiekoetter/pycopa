@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycopa"
+version = "1.0.0"
+description = "A python wrapper for copa."
+requires-python = ">=3.6"
+authors = [
+  { name = "Thomas Biekötter", email = "thomas.biekoetter@desy.de" }
+]
+dependencies = ["numpy"]
+urls = { Homepage = "https://github.com/thomasbiekoetter/pyevortran" }
+
+[tools.setuptools]
+include-package-data = true
+
+[tools.setuptools.packages.find]
+where = ["."]
+include = ["pycopa"]
+
+[tools.setuptools.package-data]
+"pycopa" = ["lib/*.so"]

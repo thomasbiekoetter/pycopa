@@ -1,0 +1,23 @@
+name = "pycopa"
+version = "0.1.0"
+license = "GNU GENERAL PUBLIC LICENSE Version 3"
+author = "Thomas Biekötter"
+maintainer = "thomas.biekoetter@desy.de"
+copyright = "Copyright 2025, Thomas Biekötter"
+[build]
+module-naming = false
+link = "gomp"
+[install]
+library = true
+test = false
+[library]
+type = "shared"
+[fortran]
+implicit-typing = false
+implicit-external = false
+source-form = "free"
+[dependencies]
+openmp = "*"
+copa = { git="git@gitlab.com:thomas.biekoetter/copa.git" }
+evortran = { git="https://gitlab.com/thomas.biekoetter/evortran.git", branch= "ifx" }
+

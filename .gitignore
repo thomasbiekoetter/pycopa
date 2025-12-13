@@ -1,4 +1,6 @@
 build/
+*.npy
+*.pdf
 *.swp
 *.swo
 __pycache__/

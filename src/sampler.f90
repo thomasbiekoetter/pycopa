@@ -68,11 +68,11 @@ contains
       rand_initialized = .true.
     end if
 
-    allocate(ranges_wp(2,ndim))
+    allocate(ranges_wp(2, ndim))
 
     do i = 1, ndim
-      ranges_wp(1,i) = lower_lims(i)
-      ranges_wp(2,i) = upper_lims(i)
+      ranges_wp(1, i) = lower_lims(i)
+      ranges_wp(2, i) = upper_lims(i)
     end do
 
     call run_sampler(  &

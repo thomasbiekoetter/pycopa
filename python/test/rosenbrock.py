@@ -24,3 +24,6 @@ walkers, chains, log_probs = run_sampler(
     upper_lims=upper_lims,
     nwalkers=50, nsteps=1000)
 
+np.save("walkers.npy", walkers)
+np.save("chains.npy", chains)
+np.save("log_probs.npy", log_probs)

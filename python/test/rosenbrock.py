@@ -18,7 +18,7 @@ def log_prior(x):
 lower_lims = np.array([-2.0, -1.0])
 upper_lims = np.array([2.0, 3.0])
 
-walkers, chains = run_sampler(
+walkers, chains, log_probs = run_sampler(
     2, log_prior, rosenbrock,
     lower_lims=lower_lims,
     upper_lims=upper_lims,

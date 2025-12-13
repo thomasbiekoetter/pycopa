@@ -36,7 +36,7 @@ contains
     ndim, log_prior_ptr, log_like_ptr,  &
     lower_lims, upper_lims,  &
     nwalkers, nsteps,  &
-    walkers, chains)  &
+    walkers, chains, log_probs)  &
     bind(C, name="pycopa__sampler_run_sampler_c")
 
     integer(c_int), value, intent(in) :: ndim
@@ -48,12 +48,14 @@ contains
     integer(c_int), value, intent(in) :: nsteps
     real(c_double), intent(out) :: walkers(ndim, nwalkers)
     real(c_double), intent(out) :: chains(ndim, nwalkers, nsteps)
+    real(c_double), intent(out) :: log_probs(nwalkers, nsteps)
 
     procedure(log_prior_py), pointer :: log_prior
     procedure(log_like_py), pointer :: log_like
     real(wp), allocatable :: ranges_wp(:, :)
     real(wp), allocatable :: walkers_wp(:, :)
     real(wp), allocatable :: chains_wp(:, :, :)
+    real(wp), allocatable :: log_probs_wp(:, :)
     integer :: i
     integer :: j
     integer :: k
@@ -73,12 +75,11 @@ contains
       ranges_wp(2,i) = upper_lims(i)
     end do
 
-    write(*,*) ndim, nwalkers, nsteps
-
     call run_sampler(  &
       ndim, log_prior_f, log_like_f,  &
       nwalkers, nsteps,  &
-      ranges_wp, walkers_wp, chains_wp)
+      ranges_wp,  &
+      walkers_wp, chains_wp, log_probs_wp)
 
     do j = 1, nwalkers
       do i = 1, ndim
@@ -91,6 +92,12 @@ contains
         do i = 1, ndim
           chains(i, j, k) = chains_wp(i, j, k)
         end do
+      end do
+    end do
+
+    do j = 1, nsteps
+      do i = 1, nwalkers
+        log_probs(i, j) = log_probs_wp(i, j)
       end do
     end do
 

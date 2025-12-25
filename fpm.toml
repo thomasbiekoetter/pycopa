@@ -18,6 +18,6 @@ implicit-external = false
 source-form = "free"
 [dependencies]
 openmp = "*"
-copa = { git="git@gitlab.com:thomas.biekoetter/copa.git" }
+copa = { git="https://github.com/thomasbiekoetter/pycopa.git" }
 evortran = { git="https://gitlab.com/thomas.biekoetter/evortran.git", branch= "ifx" }
 

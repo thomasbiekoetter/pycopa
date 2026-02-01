@@ -1,7 +1,8 @@
 [![python](https://img.shields.io/badge/Python-3.9-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
 [![Language](https://img.shields.io/badge/-Fortran-734f96?logo=fortran&logoColor=white)](https://github.com/topics/fortran)
+[![DOI](https://img.shields.io/badge/doi-10.21468/SciPostPhysCodeb.64-darkblue.svg)](https://scipost.org/SciPostPhysCodeb.64)
 [![arXiv](https://img.shields.io/badge/arXiv-2507.06082-b31b1b.svg)](https://arxiv.org/abs/2507.06082)
-[![last-commit](https://img.shields.io/github/last-commit/thomasbiekoetter/copa)](https://github.com/thomasbiekoetter/copa/commits/master)
+[![last-commit](https://img.shields.io/github/last-commit/thomasbiekoetter/copa)](https://github.com/thomasbiekoetter/pycopa/commits/master)
 
 # pycopa — Python bindings for **copa**
 
@@ -19,7 +20,7 @@ pycopa is intended for researchers and engineers who want to run copa’s high-p
 
 If you use copa in academic work, please cite the accompanying paper on **evortran**:
 
-> T. Biekötter, *evortran: a modern Fortran package for genetic algorithms with applications from LHC data fitting to LISA signal reconstruction*, [arXiv:2507.06082](https://arxiv.org/abs/2507.06082)
+> [arXiv:2507.06082]: Thomas Biekötter (IFT, Madrid), *evortran: a modern Fortran package for genetic algorithms with applications from LHC data fitting to LISA signal reconstruction*, [SciPost Phys. Codebases 64 (2026)]
 
 ```bibtex
 @article{Biekotter:2025gkp,
@@ -77,4 +78,4 @@ python rosenbrock.py
 This program samples the two-dimensional Rosenbrock function. The MCMC chains and the final walkers at completion are stored in the numpy arrays `chains` and `walkers`, respectively.
 
 
-
+[SciPost Phys. Codebases 64 (2026)]: https://scipost.org/SciPostPhysCodeb.64

@@ -39,7 +39,7 @@ If you use copa in academic work, please cite the accompanying paper on **evortr
 
 **Prerequisites**
 - The `gfortran` Fortran compiler.
-- [Fortran Package Manager (fpm)](https://github.com/fortran-lang/fpm) version **≥ 0.12.0** available on `PATH`.
+- [Fortran Package Manager (fpm)](https://github.com/fortran-lang/fpm) version **≥ 0.13.0** available on `PATH`.
 - Python 3.6+ and `pip`.
 - `make` (the provided Makefile target uses it).
 - `patchelf` (used to embed rpaths into the installed wheel so users normally don't have to set `LD_LIBRARY_PATH`).
@@ -72,7 +72,7 @@ make pycopa-debug
 
 pycopa includes an example program to demonstate the usage and to validate that the installation has been successful. To execute the example, navigate to the `python/test` folder and run the python script:
 ```bash
-cd python/test
+cd python/test/single
 python rosenbrock.py
 ```
 This program samples the two-dimensional Rosenbrock function. The MCMC chains and the final walkers at completion are stored in the numpy arrays `chains` and `walkers`, respectively.

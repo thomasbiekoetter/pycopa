@@ -18,6 +18,16 @@ implicit-external = false
 source-form = "free"
 [dependencies]
 openmp = "*"
-copa = { git="https://github.com/thomasbiekoetter/pycopa.git" }
-evortran = { git="https://gitlab.com/thomas.biekoetter/evortran.git", branch= "ifx" }
+copa = { git="https://github.com/thomasbiekoetter/copa.git", profile = "release" }
+evortran = { git="https://gitlab.com/thomas.biekoetter/evortran.git" }
+[features]
+debug.flags = "-DDEBUG -g -O0"
+debug.gfortran.flags = "-fbounds-check -fbacktrace -Wall -fmax-errors=1 -Wimplicit-interface -Wno-integer-division -fbounds-check"
+debug.ifx.flags = "-check bounds -check uninit -check pointer -traceback"
+release.flags = "-DDEBUG -O3 -fPIC"
+release.gfortran.flags = "-march=native -fmax-errors=1 -ffixed-line-length-none -fno-range-check"
+release.ifx.flags = "-xHost"
+[profiles]
+debug = ["debug"]
+release = ["release"]
 

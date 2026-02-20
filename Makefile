@@ -1,7 +1,7 @@
 PC = python
 
 pycopa-debug:
-	fpm @install-gfortran-debug install --prefix=./python/pycopa/
+	fpm install --profile debug --prefix=./python/pycopa/
 	cd python && $(PC) -m pip install -e .
 	cd python/pycopa/lib && patchelf --set-rpath '$$ORIGIN' libpycopa.so
 	cd python/pycopa/lib && patchelf --set-rpath '$$ORIGIN' libcopa.so
@@ -9,7 +9,7 @@ pycopa-debug:
 	cd python/pycopa/lib && patchelf --set-rpath '$$ORIGIN' liberror-handling.so
 
 pycopa:
-	fpm @install-gfortran-run install --prefix=./python/pycopa/
+	fpm install --profile release --prefix=./python/pycopa/
 	cd python && $(PC) -m pip install -e .
 	cd python/pycopa/lib && patchelf --set-rpath '$$ORIGIN' libpycopa.so
 	cd python/pycopa/lib && patchelf --set-rpath '$$ORIGIN' libcopa.so

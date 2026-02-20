@@ -21,7 +21,7 @@ openmp = "*"
 copa = { git="https://github.com/thomasbiekoetter/copa.git", profile = "release" }
 evortran = { git="https://gitlab.com/thomas.biekoetter/evortran.git" }
 [features]
-debug.flags = "-DDEBUG -g -O0"
+debug.flags = "-DDEBUG -g -O0 -fPIC"
 debug.gfortran.flags = "-fbounds-check -fbacktrace -Wall -fmax-errors=1 -Wimplicit-interface -Wno-integer-division -fbounds-check"
 debug.ifx.flags = "-check bounds -check uninit -check pointer -traceback"
 release.flags = "-DDEBUG -O3 -fPIC"

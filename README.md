@@ -25,13 +25,16 @@ If you use copa in academic work, please cite the accompanying paper on **evortr
 ```bibtex
 @article{Biekotter:2025gkp,
     author = {Biek{\"o}tter, Thomas},
-    title = "{evortran: a modern Fortran package for genetic algorithms with applications from LHC data fitting to LISA signal reconstruction}",
+    title = "{evortran: A modern Fortran package for genetic algorithms with applications from LHC data fitting to LISA signal reconstruction}",
     eprint = "2507.06082",
     archivePrefix = "arXiv",
     primaryClass = "hep-ph",
     reportNumber = "IFT-UAM/CSIC-25-76",
-    month = "7",
-    year = "2025"
+    doi = "10.21468/SciPostPhysCodeb.64",
+    journal = "SciPost Phys. Codeb.",
+    volume = "64",
+    pages = "1",
+    year = "2026"
 }
 ```
 

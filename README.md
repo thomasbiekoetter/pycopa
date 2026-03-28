@@ -14,6 +14,10 @@
 
 pycopa is intended for researchers and engineers who want to run copa’s high-performance samplers from Python (for example inside notebooks, pipelines, or analysis scripts).
 
+## **copa – Fortran Backend**
+
+**pycopa** is built on top of the original Fortran **copa** library, which provides efficient implementations of ensemble Markov Chain Monte Carlo (MCMC) samplers. The underlying package is available via the Fortran Package Manager (fpm). See the repository: [copa](https://github.com/thomasbiekoetter/copa)
+
 ## 📜 License and Citation
 
 **pycopa** is licensed under the **GNU General Public License v3 (GPLv3)**.

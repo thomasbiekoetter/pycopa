@@ -1,3 +1,5 @@
+.PHONY: pycopa pycopa-debug clean
+
 PC = python
 
 pycopa-debug:

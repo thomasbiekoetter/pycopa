@@ -79,7 +79,7 @@ make pycopa-debug
 
 pycopa includes an example program to demonstate the usage and to validate that the installation has been successful. To execute the example, navigate to the `python/test` folder and run the python script:
 ```bash
-cd python/test/single
+cd python/test/rosenbrock/single
 python rosenbrock.py
 ```
 This program samples the two-dimensional Rosenbrock function. The MCMC chains and the final walkers at completion are stored in the numpy arrays `chains` and `walkers`, respectively.
